@@ -117,7 +117,7 @@ pub struct PoKBBSSignatureG1<E: Pairing> {
 
 impl<E: Pairing> Zeroize for PoKBBSSignatureG1<E> {
     fn zeroize(&mut self) {
-        self.signature.zeroize();
+        // self.signature.zeroize();
         self.unrevealed_messages
             .values_mut()
             .for_each(|v| v.zeroize())
@@ -144,7 +144,7 @@ pub struct PoKBBSSignature23G1<E: Pairing> {
 
 impl<E: Pairing> Zeroize for PoKBBSSignature23G1<E> {
     fn zeroize(&mut self) {
-        self.signature.zeroize();
+        // self.signature.zeroize();
         self.unrevealed_messages
             .values_mut()
             .for_each(|v| v.zeroize())
